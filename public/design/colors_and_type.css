@@ -1,0 +1,280 @@
+/* ==========================================================================
+   Aventuria · Design Tokens
+   "Mucho más que una agencia de viajes"
+   ========================================================================== */
+
+/* Self-hosted brand fonts */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-VariableFont_wdth_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Italic-VariableFont_wdth_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* ----- Brand Palette (Identidad Cromática) ----------------------------- */
+  /* Mar Mediterráneo — tradition, deep trust */
+  --color-mediterraneo: #002557;
+  /* Mar Caribe — joy, clear skies, memorable experiences */
+  --color-caribe:       #0031D4;
+  /* Mar Maldivas — confidence, stability of the AI system */
+  --color-maldivas:     #0179E2;
+  /* Playa Waikiki — versatility, tropical dynamism */
+  --color-waikiki:      #3DFFDF;
+
+  /* Brand gradient — blue → turquoise = tech evolution */
+  --gradient-ia: linear-gradient(135deg, #0031D4 0%, #0179E2 55%, #3DFFDF 100%);
+  --gradient-ia-soft: linear-gradient(135deg, #002557 0%, #0179E2 100%);
+  --gradient-hero: linear-gradient(180deg, #002557 0%, #0031D4 60%, #0179E2 100%);
+
+  /* ----- Neutrals -------------------------------------------------------- */
+  --ink-0:   #FFFFFF;
+  --ink-50:  #F5F8FC;   /* page background, subtle cards */
+  --ink-100: #E8EEF6;   /* dividers, muted surfaces */
+  --ink-200: #CCD7E6;
+  --ink-300: #94A5BE;
+  --ink-400: #667A96;
+  --ink-500: #3D4F6B;
+  --ink-700: #1A2A44;
+  --ink-900: #0A1426;
+
+  /* ----- Semantic color tokens ------------------------------------------ */
+  --fg-primary:    var(--color-mediterraneo);
+  --fg-secondary:  var(--ink-500);
+  --fg-muted:      var(--ink-400);
+  --fg-inverted:   var(--ink-0);
+  --fg-accent:     var(--color-maldivas);
+  --fg-on-brand:   var(--ink-0);
+
+  --bg-page:       var(--ink-50);
+  --bg-surface:    var(--ink-0);
+  --bg-elevated:   var(--ink-0);
+  --bg-brand:      var(--color-mediterraneo);
+  --bg-brand-alt:  var(--color-caribe);
+  --bg-accent:     var(--color-maldivas);
+  --bg-highlight:  var(--color-waikiki);
+  --bg-muted:      var(--ink-100);
+
+  --border-subtle: var(--ink-100);
+  --border-default:var(--ink-200);
+  --border-strong: var(--ink-300);
+  --border-brand:  var(--color-maldivas);
+
+  /* Status (derived from palette to stay on-brand) */
+  --status-success: #12B886;
+  --status-warning: #F5A524;
+  --status-danger:  #E5484D;
+  --status-info:    var(--color-maldivas);
+
+  /* ----- Typography ------------------------------------------------------ */
+  --font-sans: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Weights */
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-extra:    800;
+  --fw-black:    900;
+
+  /* Type scale — geometric, generous */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  32px;
+  --text-3xl:  40px;
+  --text-4xl:  56px;
+  --text-5xl:  72px;
+  --text-6xl:  96px;
+
+  /* Line-heights */
+  --lh-tight:  1.08;
+  --lh-snug:   1.2;
+  --lh-normal: 1.45;
+  --lh-relaxed:1.6;
+
+  /* Letter-spacing (Montserrat reads best slightly tight at display sizes) */
+  --tracking-tight:  -0.02em;
+  --tracking-snug:   -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide:   0.04em;
+  --tracking-caps:   0.12em;
+
+  /* ----- Spacing / Radius / Elevation ------------------------------------ */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  --radius-xs:  6px;
+  --radius-sm:  10px;
+  --radius-md:  14px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-2xl: 40px;
+  --radius-pill: 999px;
+
+  --shadow-xs:  0 1px 2px rgba(0, 37, 87, 0.06);
+  --shadow-sm:  0 2px 6px rgba(0, 37, 87, 0.08), 0 1px 2px rgba(0, 37, 87, 0.04);
+  --shadow-md:  0 8px 20px rgba(0, 37, 87, 0.10), 0 2px 6px rgba(0, 37, 87, 0.06);
+  --shadow-lg:  0 20px 48px rgba(0, 37, 87, 0.14), 0 6px 14px rgba(0, 37, 87, 0.08);
+  --shadow-brand:0 20px 48px rgba(1, 121, 226, 0.28);
+  --shadow-inset-top: inset 0 1px 0 rgba(255,255,255,0.12);
+
+  /* ----- Motion ---------------------------------------------------------- */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 420ms;
+}
+
+/* ==========================================================================
+   Semantic element styles
+   ========================================================================== */
+
+html, body {
+  font-family: var(--font-sans);
+  color: var(--fg-primary);
+  background: var(--bg-page);
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display / headings ------------------------------------------------------ */
+.display-hero,
+.h-display {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: var(--text-6xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-primary);
+}
+
+h1, .h1 {
+  font-weight: var(--fw-extra);
+  font-size: var(--text-4xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-primary);
+  margin: 0;
+}
+
+h2, .h2 {
+  font-weight: var(--fw-bold);
+  font-size: var(--text-3xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg-primary);
+  margin: 0;
+}
+
+h3, .h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--text-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg-primary);
+  margin: 0;
+}
+
+h4, .h4 {
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-xl);
+  line-height: var(--lh-snug);
+  color: var(--fg-primary);
+  margin: 0;
+}
+
+h5, .h5 {
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-lg);
+  line-height: var(--lh-normal);
+  color: var(--fg-primary);
+  margin: 0;
+}
+
+.eyebrow {
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-accent);
+}
+
+p, .body {
+  font-weight: var(--fw-regular);
+  font-size: var(--text-base);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-secondary);
+  text-wrap: pretty;
+}
+
+.body-lg {
+  font-size: var(--text-md);
+  line-height: var(--lh-relaxed);
+}
+
+.body-sm {
+  font-size: var(--text-sm);
+  line-height: var(--lh-normal);
+}
+
+.caption {
+  font-size: var(--text-xs);
+  line-height: var(--lh-normal);
+  color: var(--fg-muted);
+  font-weight: var(--fw-medium);
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+/* Gradient text utility — used for the "iA" signature flourish ----------- */
+.text-gradient-ia {
+  background: var(--gradient-ia);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
